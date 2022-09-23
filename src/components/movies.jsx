@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import Pagination from "./common/pagination";
 import Like from "./common/like";
+import ListGroup from "./common/listGroup";
 import { getMovies } from "./services/fakeMovieService";
 import { paginate } from "./utils/paginate";
+import { genres } from "./services/fakeGenreService";
 
 class Movies extends Component {
   state = {
     movies: getMovies(),
     pageSize: 4,
     currentPage: 1,
+    genres,
   };
 
   handleDelete = (movie) => {
@@ -30,7 +33,7 @@ class Movies extends Component {
 
   render() {
     const { length: count } = this.state.movies;
-    const { pageSize, currentPage, movies: allMovies } = this.state;
+    const { genres, pageSize, currentPage, movies: allMovies } = this.state;
 
     if (count === 0) return "There are no Movies !";
 
@@ -39,6 +42,7 @@ class Movies extends Component {
     return (
       <React.Fragment>
         <p>Showing {count} movies available</p>
+        <ListGroup genres={genres} />
         <table className="table">
           <thead>
             <tr>
