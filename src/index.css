@@ -16,3 +16,7 @@ code {
 i {
   cursor: pointer;
 }
+
+.clickable {
+  cursor: pointer;
+}
