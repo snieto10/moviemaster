@@ -85,7 +85,7 @@ class Movies extends Component {
           />
         </div>
         <div className="col">
-          <p>Showing {totalCount.length} movies available</p>
+          <p>Showing {totalCount} movies available</p>
 
           <MovieTable
             movies={movies}
@@ -93,9 +93,10 @@ class Movies extends Component {
             onLike={this.handleLike}
             onDelete={this.handleDelete}
             onSort={this.handleSort}
+            totalCount={totalCount}
           />
           <Pagination
-            itemsCount={totalCount.length}
+            itemsCount={totalCount}
             pageSize={pageSize}
             onPageChange={this.handlePageChange}
             currentPage={currentPage}

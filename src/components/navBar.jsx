@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 class NavBar extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <Link class="navbar-brand" to="/home">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link className="navbar-brand" to="/home">
           Navbar
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -17,24 +17,24 @@ class NavBar extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/movies">
-                Movies <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/movies">
+                Movies <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li class="nav-item active">
-              <Link class="nav-link" to="/customers">
-                Customers <span class="sr-only">(current)</span>
+            <li className="nav-item active">
+              <Link className="nav-link" to="/customers">
+                Customers <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li class="nav-item active">
-              <Link class="nav-link" to="/rentals">
-                Rentals <span class="sr-only">(current)</span>
+            <li className="nav-item active">
+              <Link className="nav-link" to="/rentals">
+                Rentals <span className="sr-only">(current)</span>
               </Link>
             </li>
           </ul>
